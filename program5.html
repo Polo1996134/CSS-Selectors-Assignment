@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #FF4E50, #FC913A);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .clock {
+            position: relative;
+            font-size: 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .time {
+            display: inline-block;
+            position: relative;
+        }
+
+        .seconds {
+            animation: move 1s infinite;
+        }
+
+        @keyframes move {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            20% {
+                transform: translateY(-20px);
+            }
+            80% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .background-numbers {
+            font-size: 40px;
+            position: absolute;
+            opacity: 0.1;
+            color: white;
+        }
+
+        .background-numbers:nth-child(1) { top: 20%; left: 10%; }
+        .background-numbers:nth-child(2) { top: 50%; left: 60%; }
+        .background-numbers:nth-child(3) { top: 70%; left: 30%; }
+        .background-numbers:nth-child(4) { top: 10%; left: 80%; }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <span class="background-numbers">0</span>
+        <span class="background-numbers">1</span>
+        <span class="background-numbers">2</span>
+        <span class="background-numbers">3</span>
+        <span class="background-numbers">4</span>
+        <span class="background-numbers">5</span>
+        <span class="time">12:15:<span class="seconds">00</span></span>
+    </div>
+
+    <script>
+        let seconds = 0; // Starting seconds
+        const totalDuration = 10; // Total animation duration in seconds
+        const interval = 1000; // Update every second
+
+        const updateClock = () => {
+            // Update the seconds display
+            const secondElement = document.querySelector('.seconds');
+            seconds = (seconds % 13) + 1; // Increment and reset after 13
+            secondElement.textContent = seconds.toString().padStart(2, '0'); // Display with leading zero
+        };
+
+        const clockInterval = setInterval(updateClock, interval);
+
+        // Stop the clock after 10 seconds
+        setTimeout(() => {
+            clearInterval(clockInterval);
+        }, totalDuration * 1000);
+    </script>
+</body>
+</html>

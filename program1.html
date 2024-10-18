@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Store Layout</title>
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff6700;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navbar nav ul li {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .navbar .icons span {
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        /* Main Container */
+        .container {
+            padding: 20px;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .product p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        /* Banner Section */
+        .banner {
+            grid-column: span 4;
+            background-color: #ffe0b2;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .banner h2 {
+            margin-bottom: 10px;
+        }
+
+        .banner button {
+            background-color: #ff6700;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .banner button:hover {
+            background-color: #e65c00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .navbar nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Mi Store</div>
+        <nav>
+            <ul>
+                <li>Phone</li>
+                <li>TV & Smart Home</li>
+                <li>Tablet</li>
+                <li>Lifestyle</li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <span>Discover</span>
+            <span>Support</span>
+            <span>Search Icon</span>
+            <span>Cart Icon</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Product Grid -->
+        <section class="product-grid">
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/b4e67f50baf74e3cb64d17c55f6e9d45.png" alt="Redmi Earphones">
+                <h3>Redmi Earphones</h3>
+                <p>₹449</p>
+            </div>
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/91c01300c8d1568e545d1cbec5cdcd8c.png" alt="Mi Dual Driver In-ear">
+                <h3>Mi Dual Driver In-ear Earphones</h3>
+                <p>₹799</p>
+            </div>
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/5b8f7c03c08604fdfac4a81b8b236d6c.png" alt="Redmi SonicBass">
+                <h3>Redmi SonicBass Wireless</h3>
+                <p>₹1,299</p>
+            </div>
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/30c6b1e12c8c70d7c95a9db92d0d9716.png" alt="Bluetooth Speaker">
+                <h3>Mi Portable Bluetooth Speaker (16W)</h3>
+                <p>₹2,499</p>
+            </div>
+
+            <!-- Banner Section -->
+            <div class="banner">
+                <h2>Save Up to 65% On Chargers & Cables</h2>
+                <p>Free Delivery on All Products</p>
+                <button>Buy Now</button>
+            </div>
+
+            <!-- More Products -->
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/1f79d6faab19138c4150da3d8ae45e6e.png" alt="HyperCharge Adapter">
+                <h3>Xiaomi 120W HyperCharge Adapter</h3>
+                <p>₹2,999</p>
+            </div>
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/b63f7003d69c7f97f50e1f79e2c10d1b.png" alt="Fast Charger">
+                <h3>Mi 27A Fast Charger with Cable</h3>
+                <p>₹999</p>
+            </div>
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/a54e0f9a77cb8fa61ec962f4c8b05346.png" alt="SonicCharge Cable">
+                <h3>Xiaomi SonicCharge 2.0 Cable</h3>
+                <p>₹249</p>
+            </div>
+            <div class="product">
+                <img src="https://i01.appmifile.com/200_wx/mi.com/00964c004d1b7452a63f6b17f5f7e13b.png" alt="Dual Port Charger">
+                <h3>Mi 18W Dual Port Charger</h3>
+                <p>₹599</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
+

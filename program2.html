@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect on 3rd Box</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Container to hold the boxes */
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Styling for all boxes */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #4caf50;
+            transition: all 0.3s ease;
+        }
+
+        .box:nth-child(3):hover {
+            width: 200px;
+            height: 200px;
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container with 5 boxes -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

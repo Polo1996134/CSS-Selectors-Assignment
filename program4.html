@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umso-inspired Layout</title>
+    <style>
+        /* Resetting Margin and Padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #0e0e0e;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styling */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0e0e0e;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .signup {
+            padding: 8px 16px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Content Section */
+        .content {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: #6c3df6;
+        }
+
+        p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            color: #bbb;
+        }
+
+        /* Input Box Styling */
+        .input-container {
+            margin-top: 20px;
+        }
+
+        .input-box {
+            display: flex;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 30px;
+            width: 450px;
+            margin: auto;
+        }
+
+        input {
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px;
+            outline: none;
+        }
+
+        button {
+            background-color: #6c3df6;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 50px;
+        }
+
+        footer button {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <header>
+        <div class="logo">umso</div>
+        <nav>
+            <a href="#">Pricing</a>
+            <a href="#">Features</a>
+            <a href="#">Showcase</a>
+            <a href="#">Login</a>
+            <a href="#" class="signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>Get your <span class="highlight">AI Generated Website</span><br>In Seconds</h1>
+        <p>Give it a try right below, without having to sign up!</p>
+
+        <div class="input-container">
+            <div class="input-box">
+                <input type="text" placeholder="Vegan Pizza Restaurant in">
+                <button>Generate ➜</button>
+            </div>
+        </div>
+
+        <div class="reviews">
+            ⭐⭐⭐⭐⭐ 4.8 out of 5 based on 85 reviews
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <button>Made with ❤ by Umso</button>
+    </footer>
+
+</body>
+</html>
